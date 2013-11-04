@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://osamu0329nakamura.github.io/atom.xml" rel="self"/>
+  <link href="http://osamu0329nakamura.github.io/"/>
+  <updated>2013-11-04T12:53:06+09:00</updated>
+  <id>http://osamu0329nakamura.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[testpost]]></title>
+    <link href="http://osamu0329nakamura.github.io/blog/2013/11/04/testpost/"/>
+    <updated>2013-11-04T11:42:00+09:00</updated>
+    <id>http://osamu0329nakamura.github.io/blog/2013/11/04/testpost</id>
+    <content type="html"><![CDATA[<h3>7.1.4 Timestamps in Action: Total Order Broadcast</h3>
+
+<h4>The Total Order Broadcast Abstraction</h4>
+
+<p><code>to_broadcast()</code></p>
+
+<p><code>to_deliver()</code></p>
+
+<p><code>to_broadcast</code> されたメッセージは、 全てのプロセスで同じ順序で <code>to_derivery</code> され、その順序は 因果順序 causal precedence order である。</p>
+
+<p><dt><script type="math/tex"> m, m' \in M, m \rightarrow_{\small M} m'</script></dt>
+<dd>m causally precedes m&#8217;</dd></p>
+
+<ul>
+<li>同じプロセスから m と m&#8217; が to_broadcast され、m が m&#8217; より前に to_broadcast　された、</li>
+<li>または、p<sub>i</sub> が　m&#8217;　を　to_delivered する前に m を to_deliver した。</li>
+<li><p>または、 <script type="math/tex"> m \rightarrow_{\small M} n </script></p>
+
+<p>かつ <script type="math/tex"> n \rightarrow_{\small M} m </script> となる
+<script type="math/tex"> m \in M </script> が存在する。</p></li>
+</ul>
+
+
+<h4>Total Order Broadcast: Definition</h4>
+
+<p><dt><strong>Validity</strong></dt>
+<dd>もし プロセスが <code>m</code> を <code>to_deliver</code> したなら、 <code>m</code>を <code>to_broadcast</code> したプロセスが存在する。</dd></p>
+
+<p><dt><strong>Integrity</strong></dt>
+<dd>二回以上 <code>to_deliver</code> されるメッセージは無い。（おそらく、あるプロセスでって意味）</dd></p>
+
+<p><dt><strong>Total order</strong></dt>
+<dd>もしプロセスが <code>m'</code> より前に <code>m</code> を <code>to_deliver</code> するならば、
+<code>m</code> より前に <code>m'</code> を <code>to_deliver</code> するプロセスは存在しない。</dd></p>
+
+<p><dt><strong>Causal precedence order</strong></dt>
+<dd><script type="math/tex">m \rightarrow_{\small M} m' </script> ならば、<code>m</code>より前に<code>m'</code> を <code>to_deliver</code> するプロセスは存在しない。</dd></p>
+
+<p><dt><strong>Termination</strong></dt>
+<dd><code>m</code> を　<code>to_broadcast</code> したなら、全てのプロセスは <code>m</code> を <code>to_deliver</code> する。</dd></p>
+]]></content>
+  </entry>
+  
+</feed>

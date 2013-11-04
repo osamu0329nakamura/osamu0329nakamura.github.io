@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>Blog Archive - My Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://osamu0329nakamura.github.io">
+  <link rel="canonical" href="http://osamu0329nakamura.github.io/blog/archives">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -91,90 +91,35 @@
 </nav>
   <div class="container">
     <div class="row-fluid">
-      <div class="span9">
-  
-  
-  
-    <article>
       
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/04/testpost/">Testpost</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+<article role="article" class="span9">
 
   
-
-
-<time datetime="2013-11-04T11:42:00+09:00" pubdate data-updated="true">Nov 4<span>th</span>, 2013</time>
-        
-      </p>
+  <header class="page-header">
+    <h1 class="entry-title">Blog Archive</h1>
     
   </header>
+  
+  
 
 
-  <div class="entry-content"><h3>7.1.4 Timestamps in Action: Total Order Broadcast</h3>
+  
+  <h1>2013</h1>
 
-<h4>The Total Order Broadcast Abstraction</h4>
+<article>
+  <div class="well">
 
-<p><code>to_broadcast()</code></p>
+<h2><a href="/blog/2013/11/04/testpost/">testpost</a></h2>
+<time datetime="2013-11-04T11:42:00+09:00" pubdate><span class='month'>Nov</span> <span class='day'>04</span> <span class='year'>2013</span></time>
 
-<p><code>to_deliver()</code></p>
-
-<p><code>to_broadcast</code> されたメッセージは、 全てのプロセスで同じ順序で <code>to_derivery</code> され、その順序は 因果順序 causal precedence order である。</p>
-
-<p><dt><script type="math/tex"> m, m' \in M, m \rightarrow_{\small M} m'</script></dt>
-<dd>m causally precedes m&#8217;</dd></p>
-
-<ul>
-<li>同じプロセスから m と m&#8217; が to_broadcast され、m が m&#8217; より前に to_broadcast　された、</li>
-<li>または、p<sub>i</sub> が　m&#8217;　を　to_delivered する前に m を to_deliver した。</li>
-<li><p>または、 <script type="math/tex"> m \rightarrow_{\small M} n </script></p>
-
-<p>かつ <script type="math/tex"> n \rightarrow_{\small M} m </script> となる
-<script type="math/tex"> m \in M </script> が存在する。</p></li>
-</ul>
-
-
-<h4>Total Order Broadcast: Definition</h4>
-
-<p><dt><strong>Validity</strong></dt>
-<dd>もし プロセスが <code>m</code> を <code>to_deliver</code> したなら、 <code>m</code>を <code>to_broadcast</code> したプロセスが存在する。</dd></p>
-
-<p><dt><strong>Integrity</strong></dt>
-<dd>二回以上 <code>to_deliver</code> されるメッセージは無い。（おそらく、あるプロセスでって意味）</dd></p>
-
-<p><dt><strong>Total order</strong></dt>
-<dd>もしプロセスが <code>m'</code> より前に <code>m</code> を <code>to_deliver</code> するならば、
-<code>m</code> より前に <code>m'</code> を <code>to_deliver</code> するプロセスは存在しない。</dd></p>
-
-<p><dt><strong>Causal precedence order</strong></dt>
-<dd><script type="math/tex">m \rightarrow_{\small M} m' </script> ならば、<code>m</code>より前に<code>m'</code> を <code>to_deliver</code> するプロセスは存在しない。</dd></p>
-
-<p><dt><strong>Termination</strong></dt>
-<dd><code>m</code> を　<code>to_broadcast</code> したなら、全てのプロセスは <code>m</code> を <code>to_deliver</code> する。</dd></p>
 </div>
-  
-  
+
+</article>
 
 
-    </article>
   
-  <ul class="pager">
-    
-    <li><a href="/blog/archives">Blog Archives</a></li>
-    
-  </ul>
-</div>
+</article>
+
 <aside class="sidebar-nav span3">
   
     <section class="well">
@@ -194,6 +139,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
